@@ -88,6 +88,7 @@
       "wcwidth",
       "webcolors",
       "webencodings",
-      "whitenoise"
+      "whitenoise",
+      "wsgi"
    ],
 }
