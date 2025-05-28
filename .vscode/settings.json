@@ -14,7 +14,7 @@
    },
    "files.autoSave": "off",
    "workbench.colorTheme": "Visual Studio Dark",
-   "terminal.integrated.gpuAcceleration": "canvas",
+   "terminal.integrated.gpuAcceleration": "auto",
    "cSpell.words": [
       "anyio",
       "asgiref",
