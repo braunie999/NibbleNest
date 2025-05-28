@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class NibbleNestWebConfig(AppConfig):
+class ReservationsConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "nibble_nest_web"
+    name = "reservations"

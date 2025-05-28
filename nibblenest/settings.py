@@ -20,14 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = (
-    "django-insecure-0n+(pghu6ev$t4&0@74^(*@nfy^=surgtnpi6t3ltb7i)c#(k%"
-)
+SECRET_KEY = "django-insecure-er52ta%n&94ris4fz@qdh6*u3)78$my&79q*_prff-%e4_i#al"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '.herokuapp.com'
+]
 
 
 # Application definition
@@ -95,19 +95,13 @@ AUTH_PASSWORD_VALIDATORS = [
         ),
     },
     {
-        "NAME": (
-            "django.contrib.auth.password_validation.MinimumLengthValidator"
-        ),
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        "NAME": (
-            "django.contrib.auth.password_validation.CommonPasswordValidator"
-        ),
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        "NAME": (
-            "django.contrib.auth.password_validation.NumericPasswordValidator"
-        ),
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 

@@ -1,5 +1,5 @@
 """
-URL configuration for restaurant_booking project.
+URL configuration for nibblenest project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -17,11 +17,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from reservations import views as index_views
-from nibble_nest_booking import views as booking_views
+from reservations import views as reservations_views
 
 urlpatterns = [
+    path('', reservations_views.reservations, name='reservations'),
     path("admin/", admin.site.urls),
-    path("", index_views.index, name="index"),
-    path("booking/", booking_views.booking, name="booking"),
 ]
