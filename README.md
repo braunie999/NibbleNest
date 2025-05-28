@@ -1,6 +1,6 @@
 # About the Project
 
-Nibble Nest is your go-to platform for effortless restaurant reservations, helping you discover and book the perfect spot to enjoy great food with friends and family—fast, easy, and hassle-free.
+Nibble Nest is an aspiring go-to platform for effortless restaurant reservations, helping you discover and book the perfect spot to enjoy great food with friends and family—fast, easy, and hassle-free.
 
 ## Restaurant Booking System
 
@@ -21,7 +21,7 @@ A Django-based full-stack web application for restaurant reservations, enabling 
 
 ## Project Overview
 
-The Restaurant Booking System is a full-stack web application built using Django (MVC framework). It allows users to register, log in, browse the menu, book tables, and manage their reservations. Administrators can manage tables, bookings, and menu items via a secure admin panel. The application is designed to be responsive, accessible, and user-friendly, following modern UX and accessibility standards.
+The Restaurant Booking System is a full-stack web application built using Django (MVC framework). It allows users to sign up, log in, browse the menu, book tables, and manage their reservations. Administrators can manage tables, bookings, and menu items via a secure admin panel. The application is designed to be responsive, accessible, and user-friendly, following modern UX and accessibility standards.
 
 ---
 
@@ -37,7 +37,7 @@ The Restaurant Booking System is a full-stack web application built using Django
 
 ### User Experience (UX)
 
-- **Accessibility**: High-contrast colors, semantic HTML, ARIA labels, and alt text for images.
+- **Accessibility**: Neutral colors, semantic HTML, ARIA labels, and alt text for images.
 - **Responsive Design**: Built with Bootstrap’s grid system for seamless experience on all devices.
 - **Navigation**: Clear, consistent navigation bar on all pages.
 - **User Flows**: Intuitive booking and account management processes.
