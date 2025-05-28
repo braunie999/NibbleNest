@@ -17,7 +17,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from nibble_nest_web import views as index_views
+from reservations import views as index_views
 from nibble_nest_booking import views as booking_views
 
 urlpatterns = [
