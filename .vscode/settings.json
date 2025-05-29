@@ -10,12 +10,13 @@
       "**/core.Microsoft*": true,
       "**/core.mongo*": true,
       "**/core.python*": true,
-      "**/CVS": true
+      "**/CVS": true,
    },
    "files.autoSave": "off",
    "workbench.colorTheme": "Visual Studio Dark",
    "terminal.integrated.gpuAcceleration": "auto",
    "cSpell.words": [
+      "allauth",
       "anyio",
       "ASGI",
       "asgiref",
@@ -80,6 +81,7 @@
       "sniffio",
       "soupsieve",
       "sqlparse",
+      "summernote",
       "sympy",
       "terminado",
       "threadpoolctl",
