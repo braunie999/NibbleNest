@@ -17,6 +17,7 @@
    "terminal.integrated.gpuAcceleration": "auto",
    "cSpell.words": [
       "anyio",
+      "ASGI",
       "asgiref",
       "asttokens",
       "asyncio",
@@ -64,6 +65,7 @@
       "prff",
       "psutil",
       "ptyprocess",
+      "pycache",
       "pycparser",
       "Pygments",
       "pyparsing",
