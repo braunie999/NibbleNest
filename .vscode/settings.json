@@ -65,6 +65,7 @@
       "plotly",
       "prff",
       "psutil",
+      "psycopg",
       "ptyprocess",
       "pycache",
       "pycparser",
