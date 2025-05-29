@@ -1,0 +1,10 @@
+# Exclude specific files
+
+README.md
+
+# Exclude local development files
+
+.env
+.vscode/
+.git/
+.venv/
