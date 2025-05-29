@@ -85,6 +85,7 @@
       "traitlets",
       "tzdata",
       "urllib",
+      "venv",
       "wcwidth",
       "webcolors",
       "webencodings",
