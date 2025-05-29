@@ -3,8 +3,13 @@ core.mongo*
 core.python*
 env.py
 __pycache__/
+*.pyc
 *.py[cod]
 node_modules/
 .github/
 cloudinary_python.txt
 .venv
+.DS_Store
+.vscode/
+env.py
+local_settings.py
