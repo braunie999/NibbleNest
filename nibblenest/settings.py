@@ -84,6 +84,7 @@ WSGI_APPLICATION = "nibblenest.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
 #DATABASES = {
 #    "default": {
 #        "ENGINE": "django.db.backends.sqlite3",
@@ -92,7 +93,7 @@ WSGI_APPLICATION = "nibblenest.wsgi.application"
 #}
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("postgresql://neondb_owner:npg_IWVyv7nep1Cs@ep-blue-hat-a2gtdprn.eu-central-1.aws.neon.tech/swing_dill_cot_41769"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 # Password validation
