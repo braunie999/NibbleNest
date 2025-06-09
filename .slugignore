@@ -1,6 +1,7 @@
 # Exclude specific files
 
 README.md
+static/
 
 # Exclude local development files
 
@@ -8,21 +9,3 @@ README.md
 .vscode/
 .git/
 .venv/
-
-core.Microsoft*
-core.mongo*
-core.python*
-env.py
-**pycache**/
-*.log
-_.sqlite3
-_.db
-\*.pyc
-\*.py[cod]
-node_modules/
-.github/
-cloudinary_python.txt
-.DS_Store
-media/
-env.py
-local_settings.py
