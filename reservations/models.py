@@ -1,14 +1,9 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import User
+from django.utils import timezone
+
 
 # Create your models here.
-
-
-class User(AbstractUser):
-    # Inherit default Django auth fields
-    pass
-
-
 class RestaurantInfo(models.Model):
     name = models.CharField(max_length=200)
     address = models.CharField(max_length=300)
@@ -21,6 +16,29 @@ class RestaurantInfo(models.Model):
 class Table(models.Model):
     table_number = models.CharField(max_length=50)
     capacity = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"{self.table_number} ({self.capacity} seats)"
+
+
+class MenuItem(models.Model):
+    CATEGORY_CHOICES = [
+        ('starter', 'Starter'),
+        ('salad', 'Salad'),
+        ('entree', 'Entrée'),
+    ]
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    category = models.CharField(max_length=10, choices=CATEGORY_CHOICES)
+    image = models.ImageField(upload_to='menu/', blank=True, null=True)
+    order = models.PositiveIntegerField(
+        default=0,
+        help_text="Order in carousel/menu"
+    )
+
+    def __str__(self):
+        return self.name
 
 
 class Booking(models.Model):
@@ -40,6 +58,14 @@ class Booking(models.Model):
         default='pending'
     )
     special_requests = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-booking_datetime']
+
+    def __str__(self):
+        return f"{self.user} | {self.booking_datetime} | {self.table}"
 
 
 class Review(models.Model):

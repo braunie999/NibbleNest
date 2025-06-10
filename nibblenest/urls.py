@@ -21,5 +21,6 @@ from reservations import views as reservations_views
 
 urlpatterns = [
     path('', reservations_views.reservations, name='reservations'),
+    path('accounts/', include('allauth.urls')),
     path("admin/", admin.site.urls),
 ]
