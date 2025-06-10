@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}NibbleNest{% endblock %}</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+  <main>
+    {% block content %}
+    <h1>Welcome to NibbleNest</h1>
+    <p>Your one-stop solution for restaurant reservations.</p>
+    {% endblock %}
+  </main>
+  <footer>
+    <p>&copy; 2023 NibbleNest. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
