@@ -1,8 +1,20 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from .models import Booking
-from .forms import BookingForm
+from .models import Booking, RestaurantInfo, Review
+from .forms import BookingForm, ReviewForm
+
 # Create your views here.
+
+
+def restaurant_info(request):
+    restaurant = get_object_or_404(RestaurantInfo)
+    reviews = Review.objects.all().order_by('-timestamp')
+    review_form = ReviewForm()
+    return render(request, 'reservations/restaurant_info.html', {
+        'restaurant': restaurant,
+        'reviews': reviews,
+        'review_form': review_form,
+    })
 
 
 @login_required
@@ -60,3 +72,14 @@ def booking_list(request):
         'reservations/booking_list.html',
         {'bookings': bookings}
     )
+
+
+@login_required
+def leave_review(request):
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            review.save()
+    return redirect('restaurant_info')

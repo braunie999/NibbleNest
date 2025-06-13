@@ -14,4 +14,6 @@ urlpatterns = [
         views.cancel_booking,
         name='cancel_booking'
     ),
+    path('restaurant/', views.restaurant_info, name='restaurant_info'),
+    path('restaurant/review/', views.leave_review, name='leave_review'),
 ]

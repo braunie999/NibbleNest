@@ -1,6 +1,6 @@
 from django import forms
 from django.utils import timezone
-from .models import Booking
+from .models import Booking, Review
 
 
 class BookingForm(forms.ModelForm):
@@ -30,3 +30,13 @@ def clean_booking_datetime(self):
         raise forms.ValidationError(
             "The booking date and time cannot be in the past.")
     return booking_datetime
+
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['rating', 'comment']
+        widgets = {
+            'rating': forms.NumberInput(attrs={'min': 1, 'max': 5}),
+            'comment': forms.Textarea(attrs={'rows': 3}),
+        }
