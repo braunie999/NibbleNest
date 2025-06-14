@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from .models import Booking, RestaurantInfo, Review
+from .models import Booking, RestaurantInfo, Review, MenuItem, Table
 from .forms import BookingForm, ReviewForm
 
 # Create your views here.
@@ -16,6 +16,10 @@ def restaurant_info(request):
         'review_form': review_form,
     })
 
+def home_view(request):
+    starters = MenuItem.objects.filter(category='starter')
+    salads = MenuItem.objects.filter(category='salad')
+    entrees = MenuItem.objects.filter(category='entree')
 
 @login_required
 def create_booking(request):
