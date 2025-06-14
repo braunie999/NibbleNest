@@ -48,6 +48,7 @@
       "jsonschema",
       "jupyterlab",
       "kiwisolver",
+      "makemigrations",
       "mathjax",
       "matplotlib",
       "mpmath",
@@ -74,6 +75,7 @@
       "pytz",
       "pyzmq",
       "rpds",
+      "runserver",
       "scikit",
       "scipy",
       "seaborn",
@@ -95,6 +97,7 @@
       "webcolors",
       "webencodings",
       "whitenoise",
+      "Wireframes",
       "wsgi"
    ],
 }

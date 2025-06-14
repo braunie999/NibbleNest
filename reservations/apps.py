@@ -10,4 +10,6 @@ class ReservationsConfig(AppConfig):
 def ready(self):
     admin.site.site_header = "Restaurant Reservations Admin"
     admin.site.site_title = "Restaurant Reservations Admin Portal"
-    admin.site.index_title = "Welcome to the Restaurant Reservations Admin Portal"
+    admin.site.index_title = (
+        "Welcome to the Restaurant Reservations Admin Portal"
+    )

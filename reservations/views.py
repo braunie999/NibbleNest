@@ -16,10 +16,12 @@ def restaurant_info(request):
         'review_form': review_form,
     })
 
+
 def home_view(request):
     starters = MenuItem.objects.filter(category='starter')
     salads = MenuItem.objects.filter(category='salad')
     entrees = MenuItem.objects.filter(category='entree')
+
 
 @login_required
 def create_booking(request):
