@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nibble Nest | Farm to Table</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="{% static 'css/css/style.css' %}">
+
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="container" style="max-width: 1100px; margin: 0 auto;">
+    <div class="row">
+      <div class="col-12">
+        <div class="header-logo text-center">
+          <!-- Optional: Add your logo SVG here -->
+          <img src="{% static 'images/logo.svg' %}" alt="Nibble Nest Logo" style="height:54px;" />
+        </div>
+        <div class="nn-title text-center">Nibble Nest</div>
+        <div class="nn-subtitle text-center mb-1">FARM TO TABLE</div>
+        <nav class="nn-navbar">
+          <a href="{% url 'home' %}">HOME</a>
+          <a href="{% url 'about' %}">ABOUT</a>
+          <a href="{% url 'contact' %}">CONTACT</a>
+        </nav>
+      </div>
+    </div>
+    <!-- HERO IMAGE -->
+    <div>
+      <img src="{% static 'images/hero.jpg' %}" alt="Farm to Table Dish" class="hero-img">
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <div class="menu-section pb-4" style="max-width:900px; margin:0 auto;">
+    <div class="menu-title">MENU</div>
+    <!-- STARTERS -->
+    <div class="menu-category">STARTERS</div>
+    <div class="menu-list">
+      <div class="row">
+        {% for item in starters %}
+        <div class="col-md-6">
+          <div class="menu-row">
+            <div>
+              <div class="menu-item-name">{{ item.name }}</div>
+              {% if item.description %}
+              <div class="menu-item-desc">{{ item.description }}</div>
+              {% endif %}
+            </div>
+            <div class="menu-item-price">{{ item.price|floatformat:0 }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- SALADS -->
+    <div class="menu-category">SALADS</div>
+    <div class="menu-list">
+      <div class="row">
+        {% for item in salads %}
+        <div class="col-md-6">
+          <div class="menu-row">
+            <div>
+              <div class="menu-item-name">{{ item.name }}</div>
+              {% if item.description %}
+              <div class="menu-item-desc">{{ item.description }}</div>
+              {% endif %}
+            </div>
+            <div class="menu-item-price">{{ item.price|floatformat:0 }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- ENTREES -->
+    <div class="menu-category">ENTRÉES</div>
+    <div class="menu-list">
+      <div class="row">
+        {% for item in entrees %}
+        <div class="col-md-6">
+          <div class="menu-row">
+            <div>
+              <div class="menu-item-name">{{ item.name }}</div>
+              {% if item.description %}
+              <div class="menu-item-desc">{{ item.description }}</div>
+              {% endif %}
+            </div>
+            <div class="menu-item-price">{{ item.price|floatformat:0 }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
