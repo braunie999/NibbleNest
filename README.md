@@ -29,7 +29,35 @@ The Restaurant Booking System is a full-stack web application built using Django
 
 - Agile methodology with GitHub issues for project tracking.
 - User stories and sprints to organize development.
-- Wireframes created with Figma.
+- Git for version control.
+
+### User Stories
+
+- **As a user**, I want to register and log in securely so that I can manage my bookings.
+- **As a user**, I want to browse the menu so that I can see what dishes are available.
+- **As a user**, I want to book a table for a specific date and time so that I can dine at the restaurant.
+- **As an admin**, I want to manage bookings and tables so that I can ensure smooth operations.
+- **As an admin**, I want to manage the menu items so that I can keep the offerings up-to-date.
+- **As a user**, I want to view my booking history so that I can keep track of my reservations.
+- **As a user**, I want to edit or cancel my bookings so that I can manage my plans easily.
+- **As a user**, I want to have a responsive and accessible interface so that I can use the application on any device.
+- **As a user**, I want to have a clear and intuitive navigation system so that I can find what I need quickly.
+
+### Sprints
+
+- **Sprint 1**: User authentication (registration, login, logout).
+- **Sprint 2**: Menu browsing and table booking functionality.
+- **Sprint 3**: User profile management and booking history.
+- **Sprint 4**: Admin features for managing bookings, tables, and menu items.
+- **Sprint 5**: UX enhancements, accessibility improvements, and responsive design.
+
+### Project Board
+
+You can follow all features and tasks on our [Project Board](https://github.com/braunie999/NibbleNest/projects/1).
+
+### Issues
+
+You can view all issues and their statuses on our [Issues Page](https://github.com/braunie999/NibbleNest/issues).
 
 ---
 
@@ -83,7 +111,7 @@ The Restaurant Booking System is a full-stack web application built using Django
 
 - Backend: Django, PostgreSQL (production), SQLite (development)
 - Frontend: HTML, CSS, JavaScript, Bootstrap
-- Media: Cloudinary for image storage
+- Media: Cloudinary for image storage still to be implemented
 - Authentication: Django Allauth
 - Deployment: Heroku
 - Other: Git/GitHub for version control
@@ -118,7 +146,32 @@ A custom data model was designed to fit the restaurant booking domain, following
 
 ### Local Deployment
 
+1. Clone the repository.
+2. Create and activate a virtual environment.
+3. Install dependencies using:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run migrations:
+
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+
+5. Start the development server:
+
+   ```bash
+   python manage.py runserver
+   ```
+
 ### Heroku Deployment
+
+- The application is configured for deployment on Heroku. Environment variables (including Cloudinary and Django Allauth settings) are managed via Heroku's dashboard.
+- Continuous delivery is enabled using GitHub integration and Heroku pipelines.
+- For detailed deployment instructions, refer to the [Heroku Deployment Guide](https://devcenter.heroku.com/articles/getting-started-with-django).
 
 ---
 
@@ -131,3 +184,11 @@ A custom data model was designed to fit the restaurant booking domain, following
 ---
 
 ### Resources
+
+- [Django Project](https://www.djangoproject.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Cloudinary](https://cloudinary.com/)
+- [Django Documentation](https://docs.djangoproject.com/)
+- [Bootstrap Documentation](https://getbootstrap.com/)
+- [Cloudinary Documentation](https://cloudinary.com/documentation)
+- [Django Allauth Documentation](https://django-allauth.readthedocs.io/en/latest/)
